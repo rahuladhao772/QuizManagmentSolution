@@ -1,0 +1,116 @@
+﻿@using QuizManagmentSystem.Models.Enumration;
+@model UserData
+<div class="row">
+    <div class="box center-box w-50">
+         <form asp-controller="Home" asp-action="Registration" method="post">
+             <h1 class="text-center">Registration</h1>
+             <div class="form-field flex">
+                 <div class="w-50">
+                     <label class="form-label" asp-for="FName">First Name</label>
+                 </div>
+                 <div class="flex-1">
+                     <input class="form-control" asp-for="FName" placeholder="Enter First Name"/>
+                     <span asp-validation-for="FName" class="text-danger"></span>
+                 </div>
+             </div>
+            <div class="form-field flex">
+                <div class="w-50">
+                    <label class="form-label" asp-for="MName">Middle Name</label>
+                </div>
+                <div class="flex-1">
+                    <input class="form-control" asp-for="MName" placeholder="Enter Middle Name" />
+                    <span asp-validation-for="MName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-field flex">
+                <div class="w-50">
+                    <label class="form-label" asp-for="LName">Last Name</label>
+                </div>
+                <div class="flex-1">
+                    <input class="form-control" asp-for="LName" placeholder="Enter Last Name" />
+                    <span asp-validation-for="LName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-field flex">
+                <div class="w-50">
+                    <label class="form-label" asp-for="Email">Email</label>
+                </div>
+                <div class="flex-1">
+                    <input class="form-control" asp-for="Email" placeholder="Enter EmailId" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-field flex">
+                <div class="w-50">
+                    <label class="form-label" asp-for="Gender">Gender</label>
+                </div>
+                <div class="flex-1">
+                    <select asp-for="Gender" class="form-control">
+                        <option value="">--please select--</option>
+                        <option value="Male">Male</option>
+                         <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-field flex">
+                <div class="w-50">
+                    <label class="form-label" asp-for="Depatment">Depatment</label>
+                </div>
+                <div class="flex-1">
+                    <input class="form-control" asp-for="Depatment" placeholder="Enter Depatment" />
+                    <span asp-validation-for="Depatment" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-field flex">
+                <div class="w-50">
+                    <label class="form-label" asp-for="Phone">Contact Number</label>
+                </div>
+                <div class="flex-1">
+                    <input class="form-control" asp-for="Phone" placeholder="Enter Contact Number" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-field flex">
+                <div class="w-50">
+                    <label class="form-label" asp-for="Password">Password</label>
+                </div>
+                <div class="flex-1">
+                    <input class="form-control" asp-for="Password" placeholder="Enter Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-field flex">
+                <div class="w-50">
+                    <label class="form-label" asp-for="ConfirmPassword">Confirm Password</label>
+                </div>
+                <div class="flex-1">
+                    <input class="form-control" asp-for="ConfirmPassword" placeholder="Enter Confirm Password" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-field flex">
+                <div class="w-50">
+                    
+                </div>
+                <div class="flex-1">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                <div>
+                    <span class="text-red">@ViewBag.message</span>
+                </div>
+            </div>
+           
+        </form>
+    </div>
+</div>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

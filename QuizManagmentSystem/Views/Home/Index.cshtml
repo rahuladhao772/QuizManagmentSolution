@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="box center-box w-50">
+    <h1 class="text-danger">Welcome To</h1>
+    <div class="card">
+        <img src="~/Quiz.jpg"/>
+    </div>
+    <div class="flex">
+        <div class="row">
+            <div class="form-field flex">
+                <div class="w-25">
+                    <button class="btn btn-outline-success mt-2"><a asp-action="Login" asp-controller="Home">Login</a></button>
+                </div>
+                <div class="flex-end">
+                    <div>
+                        <button class="btn btn-outline-success mt-2"><a asp-action="Registration" asp-controller="Home">Registration</a></button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
